@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scrips/Menu/Menu_1P.gd" type="Script" id=1]
+[ext_resource path="res://Fount/MainFount.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scrips/Menu/Menu_Multy.gd" type="Script" id=3]
+[ext_resource path="res://Scrips/Menu/Menu_P2.gd" type="Script" id=4]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 328.0
+margin_top = 32.0
+margin_right = 719.252
+margin_bottom = 104.124
+rect_min_size = Vector2( -1.575, 0 )
+rect_scale = Vector2( 0.936, 1.089 )
+rect_pivot_offset = Vector2( -0.003, 0 )
+custom_fonts/font = ExtResource( 2 )
+text = "Dice Fight"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 392.0
+margin_top = 256.0
+margin_right = 632.0
+margin_bottom = 332.0
+custom_fonts/font = ExtResource( 2 )
+text = "1 P"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 392.0
+margin_top = 352.0
+margin_right = 632.0
+margin_bottom = 428.0
+custom_fonts/font = ExtResource( 2 )
+text = "2 P"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 392.0
+margin_top = 448.0
+margin_right = 632.0
+margin_bottom = 524.0
+custom_fonts/font = ExtResource( 2 )
+disabled = true
+text = "Multiplayer"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
